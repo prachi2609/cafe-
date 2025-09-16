@@ -1,0 +1,186 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f4ef;
+  color: #333;
+}
+
+header {
+  background-color: #7B3F00;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+    
+
+
+.about-section {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 0 20px;
+  line-height: 1.8;
+}
+
+.about-section h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #7B3F00;
+}
+
+.about-section p {
+  font-size: 1.1em;
+}
+
+.image-container {
+  text-align: center;
+  margin: 10px 0; 
+}
+
+
+.image-container img {
+  width: 50%;
+  max-width: 200px; 
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+footer {
+  background-color: #eee;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 20px;
+  font-size: 0.9em;
+  position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: rgba(31, 29, 29, 0.904);
+   color: white;
+   text-align: center;
+}
+nav {
+    width: 1343px;
+    height: 60px;
+    border-radius: 5px;
+    background: #fff;
+    display: flex;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    display: flex;
+}
+
+nav label {
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 5px;
+    margin: 0 5px;
+    color: burlywood;
+    z-index: 1;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* nav label:hover {
+    background: rgba(175, 108, 91, 0.685);
+} */
+
+nav label i {
+    margin-right: 4px;
+}
+
+.slider {
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    /* background: brown; */
+    left: 0;
+    top: 0;
+    border-radius: 5px;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#home:checked~nav label.home,
+#blog:checked~nav label.blog,
+#code:checked~nav label.code,
+#help:checked~nav label.help,
+#user:checked~nav label.user {
+    color: #fff;
+}
+
+#blog:checked~nav .slider {
+    left: 20%;
+}
+
+#code:checked~nav .slider {
+    left: 40%;
+}
+
+#help:checked~nav .slider {
+    left: 60%;
+}
+
+#user:checked~nav .slider {
+    left: 80%;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+/* responsiveness */
+
+@media (max-width: 650px) {
+
+    nav {
+        width: 530px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    nav {
+        width: 430px;
+    }
+
+    nav label {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    nav {
+        width: 330px;
+    }
+
+    nav span {
+        display: none;
+    }
+
+    nav label {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 350px) {
+
+    nav {
+        width: 290px;
+    }
+}
